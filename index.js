@@ -11,12 +11,12 @@ app.listen(PORT, err => {
     console.log("server running");
 });
 
-app.get('/downloadmp3', async (req, res, next) => {
+app.get('/downloadmp3', (req, res, next) => {
 	try {
 		var url = req.query.url;
 		let title = 'audio';
 
-		await ytdl.getBasicInfo(url, {
+		ytdl.getBasicInfo(url, {
 			format: 'mp4'
 		}, (err, info) => {
 			if (err) throw err;
