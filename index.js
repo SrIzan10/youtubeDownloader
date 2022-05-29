@@ -2,13 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const ytdl = require('ytdl-core');
 const app = express();
-const PORT = 80;
 
 app.use(cors());
 
-app.listen(PORT, () => {
-	console.log(`Server Works !!! At port ${PORT}`);
-});
+const PORT = process.env.PORT || 3000;
 
 app.get('/downloadmp3', async (req, res, next) => {
 	try {
