@@ -1,7 +1,7 @@
 let Btn = document.getElementById('btn');
 let URLinput = document.querySelector('.URL-input');
 let select = document.querySelector('.opt');
-let serverURL = 'http://youtubedownloader-srizan.herokuapp.com:80';
+let serverURL = 'http://youtubedownloader-srizan.herokuapp.com';
 
 Btn.addEventListener('click', () => {
 	if (!URLinput.value) {
